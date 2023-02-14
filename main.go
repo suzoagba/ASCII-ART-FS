@@ -7,12 +7,16 @@ import (
 )
 
 func main() {
+	if len(os.Args) < 4 {
 	font, err := os.ReadFile("font/" + os.Args[2] + ".txt") //reading right banner from txt files
 	if err != nil {
 		fmt.Println(err)
 	}
 	banner := strings.Split(string(font[1:]), "\n\n")
-	printBanner(banner)
+	printBanner(banner) 
+	}else {
+		fmt.Println("Error: insufficient arguments")
+	}
 
 }
 
