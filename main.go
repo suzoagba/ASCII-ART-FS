@@ -9,9 +9,6 @@ import (
 func main() {
 	switch len(os.Args) {
 	case 2:
-		//fmt.Println("Usage: go run . [STRING] [BANNER]")
-		//return
-	//}
 		font, _ := os.ReadFile("font/standard.txt")
 		banner := strings.Split(string(font[1:]), "\n\n") //reading right banner from txt files
 		printBanner(os.Args[1], banner)
